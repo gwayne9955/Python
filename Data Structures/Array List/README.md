@@ -1,2 +1,2 @@
-# lab-4-gwayne9955
-lab-4-gwayne9955 created by GitHub Classroom
+# Array List
+Simple Data Structure implementing an ArrayList, including operations for sort, grow, and iteration.

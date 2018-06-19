@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 # A List is a class that represents an Array style list in python
 class List:
     def __init__(self):

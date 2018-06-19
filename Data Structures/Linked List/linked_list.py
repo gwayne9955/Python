@@ -1,9 +1,13 @@
+#
+# Garrett Wayne
+#
+
 # a List is one of
 #   - None, or
 #   - Pair(first, rest)
 class Pair:
     def __init__(self, first, rest):
-        self.first = first  # A HuffmanTree
+        self.first = first  # An Any
         self.rest = rest    # An List
 
     def __eq__(self, other):
@@ -19,7 +23,7 @@ class Pair:
 def empty_list():
     return None
 
-# List int HuffmanTree -> List
+# List int Any -> List
 # This function takes a list, an integer index, and another value (of any type) as arguments and
 # places the value at index position in the list (zero-based indexing; any element at the given
 # index before this operation will now immediately follow the new element)
@@ -40,7 +44,7 @@ def length(lister):
     else:
         return 1 + length(lister.rest)
 
-# List int -> HuffmanTree
+# List int -> Any
 # Returns the value in the list at the given index
 def get(lister, index):
     if lister == None or index < 0:
@@ -51,7 +55,7 @@ def get(lister, index):
         else:
             return get(lister.rest, index - 1)
 
-# List int HuffmanTree -> List
+# List int Any -> List
 # Replaces the element at index position in the list with the given value and returns the list
 def set(lister, index, value):
     if lister == None or index < 0:
@@ -62,7 +66,7 @@ def set(lister, index, value):
         else:
             return Pair(lister.first, set(lister.rest, index - 1, value))
 
-# List int -> HuffmanTree List
+# List int -> Any List
 # Removes the value at the given index and returns the value removed and the list
 def remove(lister, index, pos = 0, partial = None):
     if (index < 0):
@@ -90,7 +94,7 @@ def foreach(lister, function):
         function(lister.first)
         return foreach(lister.rest, function)
 
-# List HuffmanTree -> List
+# List Any -> List
 # Accepts a SORTED linked list and a given value and returns a new list
 # with the value inserted into the list in the proper location
 def insert_sorted(lister, tree, function):

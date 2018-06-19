@@ -1,2 +1,2 @@
-# lab-4-gwayne9955
-lab-4-gwayne9955 created by GitHub Classroom
+# Linked List
+A basic Linked List implementation using Nodes that can hold any type of data. Sorting, inserting, and iteration supported.

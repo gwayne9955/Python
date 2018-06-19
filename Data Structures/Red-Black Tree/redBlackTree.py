@@ -1,7 +1,10 @@
+#
+# Garrett Wayne
+#
+
 # A Red/BlackTree is one of
 #   - None, or
 #   - Node(Color, float, Red/BlackTree, Red/BlackTree)
-
 class Node:
     def __init__(self, color, left, right):
         self.color = color

@@ -1,2 +1,2 @@
-# lab-4-gwayne9955
-lab-4-gwayne9955 created by GitHub Classroom
+# Event Queue
+A special Priority Queue implemetation to handle entries with a certain time to execute. An event time driven queue.

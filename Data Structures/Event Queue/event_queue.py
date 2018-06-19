@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 from priority_queue import *
 # An EventQueue is a class containing a PriorityQueue and time represented by an integer
 class EventQueue:

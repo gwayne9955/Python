@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 # A Queue is a class that represents an Array style queue in python
 class Queue:
     def __init__(self):

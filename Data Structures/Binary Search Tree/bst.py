@@ -1,3 +1,8 @@
+#
+# Garrett Wayne
+#
+
+# A BinarySearchTree contains a comes_before function and a BST
 class BinarySearchTree:
     def __init__(self, comes_before):
         self.comes_before = comes_before    # a function

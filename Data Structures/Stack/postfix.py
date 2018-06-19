@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 from linked_stack import *
 
 # str -> float

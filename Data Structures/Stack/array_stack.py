@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 # A Stack is a class that represents an Array style stack in python
 class Stack:
     def __init__(self):

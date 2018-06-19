@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 # a Stack is one of
 #   - None, or
 #   - Pair(first, rest)

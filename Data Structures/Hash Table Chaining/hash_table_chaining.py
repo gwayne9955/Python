@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 # A HashTable has a 2D Python list, a capacity, a size, and a number of total collisions
 class HashTable:
     def __init__(self):

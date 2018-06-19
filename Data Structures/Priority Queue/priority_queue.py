@@ -1,3 +1,7 @@
+#
+# Garrett Wayne
+#
+
 import sys
 sys.setrecursionlimit(50100)
 # A PriorityQueue is a class that contains a function and a List

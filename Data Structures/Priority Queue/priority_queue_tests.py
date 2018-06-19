@@ -1,9 +1,11 @@
+#
+# Garrett Wayne
+#
+
 import unittest
 from priority_queue import *
 
 class TestList(unittest.TestCase):
-    # Note that this test doesn't assert anything! It just verifies your
-    #  class and function definitions.
 
     def test_repr(self):
         self.assertEqual(repr(Pair(3, Pair(4, None))), "Pair(3, Pair(4, None))")

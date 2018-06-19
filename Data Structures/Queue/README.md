@@ -1,2 +1,2 @@
-# lab-4-gwayne9955
-lab-4-gwayne9955 created by GitHub Classroom
+# Queue, Standard Queue
+A standard Queue implementation made with two linked lists, to manage the front and back of the queues, and reversing the lists when necessary.

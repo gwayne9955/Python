@@ -4,16 +4,35 @@
 
 # A Red/BlackTree is one of
 #   - None, or
-#   - Node(Color, float, Red/BlackTree, Red/BlackTree)
+#   - Node(Color, value, Red/BlackTree, Red/BlackTree)
 class Node:
-    def __init__(self, color, left, right):
+    def __init__(self, color, val, left, right):
         self.color = color
+        self.val = val
         self.left = left
         self.right = right
+
+    def __eq__(self, other):
+        return (type(other) == Node
+                and self.color == other.color
+                and self.val == other.val
+                and self.left == other.left
+                and self.right == other.right)
+
+    def __repr__(self):
+        return "Node({!r}, {!r}, {!r}, {!r})".format(self.color, self.val, self.left, self.right)
 
 # A Color is one of
 #   - "R" or
 #   - "B"
+
+# Red/BlackTree -> bool
+# Returns if the tree is empty or not
+def is_empty(tree):
+    if tree is None:
+        return True
+    else:
+        return False
 
 # Red/BlackTree float -> Red/BlackTree
 # inserts the value in the tree returning the tree (forcing the root to be black)

@@ -20,146 +20,59 @@ class TestCases(unittest.TestCase):
 
     def test_insert(self):
         RBTree = insert(None, 51)
+        self.assertEqual(RBTree, Node("B", 51, None, None))
         RBTree = insert(RBTree, 21)
         self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), None))
-    #     BTree.root = BSTNode(2, BSTNode(1, None, None), BSTNode(7, None, None))
-    #     BTree = insert(BTree, 9)
-    #     self.assertEqual(BTree.root, BSTNode(2, BSTNode(1, None, None), BSTNode(7, None,
-    #     BSTNode(9, None, None))))
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(2, BSTNode(1, None, None), BSTNode(7, None, None))
-    #     BTree = insert(BTree, 1)
-    #     self.assertEqual(BTree.root,  BSTNode(2, BSTNode(1, None, BSTNode(1, None, None)),
-    #     BSTNode(7, None, None)))
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11, BSTNode(5, None,None),
-    #     BSTNode(15, BSTNode(12, None, None), None)), BSTNode(37, BSTNode(28, None, None),
-    #     BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, None), BSTNode(83, BSTNode(77, None, None),
-    #     BSTNode(94, None, None)))), BSTNode(143, BSTNode(120, BSTNode(107, None, None),
-    #     BSTNode(137, BSTNode(125, None, None),
-    #     BSTNode(139, None, BSTNode(141, None, None)))), BSTNode(194, BSTNode(162,
-    #     BSTNode(151, None, None), BSTNode(184, None, None)), BSTNode(210, None, None))))
-    #     BTree = insert(BTree, 2)
-    #     self.assertEqual(BTree.root, BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11,
-    #     BSTNode(5, BSTNode(2, None, None),None), BSTNode(15, BSTNode(12, None, None), None)),
-    #     BSTNode(37, BSTNode(28, None, None), BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, None), BSTNode(83, BSTNode(77, None, None),
-    #     BSTNode(94, None, None)))), BSTNode(143, BSTNode(120, BSTNode(107, None, None),
-    #     BSTNode(137, BSTNode(125, None, None), BSTNode(139, None,
-    #     BSTNode(141, None, None)))), BSTNode(194, BSTNode(162, BSTNode(151, None, None),
-    #     BSTNode(184, None, None)), BSTNode(210, None, None)))))
-    #     BTree = insert(BTree, 59)
-    #     self.assertEqual(BTree.root, BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11, BSTNode(5,
-    #     BSTNode(2, None, None),None), BSTNode(15, BSTNode(12, None, None), None)),
-    #     BSTNode(37, BSTNode(28, None, None), BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, BSTNode(59, None, None)), BSTNode(83,
-    #     BSTNode(77, None, None), BSTNode(94, None, None)))), BSTNode(143, BSTNode(120,
-    #     BSTNode(107, None, None), BSTNode(137, BSTNode(125, None, None),
-    #     BSTNode(139, None, BSTNode(141, None, None)))), BSTNode(194, BSTNode(162,
-    #     BSTNode(151, None, None), BSTNode(184, None, None)), BSTNode(210, None, None)))))
-    #     BTree = insert(BTree, 101)
-    #     self.assertEqual(BTree.root, BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11, BSTNode(5,
-    #     BSTNode(2, None, None),None), BSTNode(15, BSTNode(12, None, None), None)), BSTNode(37,
-    #     BSTNode(28, None, None), BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, BSTNode(59, None, None)), BSTNode(83,
-    #     BSTNode(77, None, None), BSTNode(94, None, BSTNode(101, None, None))))),
-    #     BSTNode(143, BSTNode(120, BSTNode(107, None, None), BSTNode(137,
-    #     BSTNode(125, None, None),
-    #     BSTNode(139, None, BSTNode(141, None, None)))), BSTNode(194, BSTNode(162,
-    #     BSTNode(151, None, None), BSTNode(184, None, None)), BSTNode(210, None, None)))))
-    #     BTree = insert(BTree, 145)
-    #     self.assertEqual(BTree.root, BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11, BSTNode(5,
-    #     BSTNode(2, None, None),None), BSTNode(15, BSTNode(12, None, None), None)), BSTNode(37,
-    #     BSTNode(28, None, None), BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, BSTNode(59, None, None)), BSTNode(83,
-    #     BSTNode(77, None, None), BSTNode(94, None, BSTNode(101, None, None))))), BSTNode(143,
-    #     BSTNode(120, BSTNode(107, None, None), BSTNode(137, BSTNode(125, None, None),
-    #     BSTNode(139, None, BSTNode(141, None, None)))), BSTNode(194, BSTNode(162, BSTNode(151,
-    #     BSTNode(145, None, None), None), BSTNode(184, None, None)),
-    #     BSTNode(210, None, None)))))
-    #     BTree = insert(BTree, 215)
-    #     self.assertEqual(BTree.root, BSTNode(103, BSTNode(51, BSTNode(24, BSTNode(11, BSTNode(5,
-    #     BSTNode(2, None, None),None), BSTNode(15, BSTNode(12, None, None), None)), BSTNode(37,
-    #     BSTNode(28, None, None), BSTNode(43, None, None))),
-    #     BSTNode(70, BSTNode(57, None, BSTNode(59, None, None)), BSTNode(83,
-    #     BSTNode(77, None, None), BSTNode(94, None, BSTNode(101, None, None))))),
-    #     BSTNode(143, BSTNode(120, BSTNode(107, None, None), BSTNode(137,
-    #     BSTNode(125, None, None),
-    #     BSTNode(139, None, BSTNode(141, None, None)))), BSTNode(194, BSTNode(162,
-    #     BSTNode(151, BSTNode(145, None, None), None), BSTNode(184, None, None)),
-    #     BSTNode(210, None, BSTNode(215, None, None))))))
+        RBTree = insert(RBTree, 124)
+        self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), Node("R", 124, None, None)))
+        RBTree = insert(RBTree, 33)
+        self.assertEqual(RBTree, Node("B", 33, Node("B", 21, None, None), Node("B", 51, None, Node("R", 124, None, None))))
+        RBTree = insert(RBTree, 92)
+        self.assertEqual(RBTree, Node('B', 33, Node('B', 21, None, None), Node('R', 92, Node('B', 51, None, None), Node('B', 124, None, None))))
+        RBTree = insert(RBTree, 27)
+        self.assertEqual(RBTree, Node('B', 33, Node('B', 21, None, Node("R", 27, None, None)), Node('R', 92, Node('B', 51, None, None), Node('B', 124, None, None))))
 
-    # def test_lookup(self):
-    #     BTree = BinarySearchTree(comes_before)
-    #     self.assertEqual(lookup(BTree, 6), False)
-    #     BTree.root = BSTNode(2, BSTNode(1, None, None), BSTNode(7, None, None))
-    #     self.assertEqual(lookup(BTree, 1), True)
-    #     self.assertEqual(lookup(BTree,12), False)
+    def test_lookup(self):
+        RBTree = insert(None, 5)
+        self.assertEqual(lookup(RBTree, 6), False)
+        self.assertEqual(lookup(RBTree, 5), True)
+        RBTree = insert(RBTree, 1)
+        self.assertEqual(lookup(RBTree, 1), True)
+        self.assertEqual(lookup(RBTree,12), False)
+        RBTree = insert(RBTree, 11)
+        self.assertEqual(lookup(RBTree, 1), True)
+        self.assertEqual(lookup(RBTree, 11), True)
+        self.assertEqual(lookup(RBTree, 5), True)
+        self.assertEqual(lookup(RBTree,12), False)
 
-    # def test_lookup_help(self):
-    #     self.assertEqual(lookup_help(BSTNode(15, BSTNode(7, None, BSTNode(11, None, None)),
-    #     BSTNode(24, BSTNode(18, None, None), BSTNode(37, None, None))), 7, comes_before), True)
-    #     self.assertEqual(lookup_help(BSTNode(15, BSTNode(7, None, BSTNode(11, None, None)),
-    #     BSTNode(24, BSTNode(18, None, None), BSTNode(37, None, None))), 37, comes_before), True)
-    #     self.assertEqual(lookup_help(BSTNode(15, BSTNode(7, None, BSTNode(11, None, None)),
-    #     BSTNode(24, BSTNode(18, None, None), BSTNode(37, None, None))), 27, comes_before), False)
-    #     self.assertEqual(lookup_help(BSTNode(15, BSTNode(7, None, BSTNode(11, None, None)),
-    #     BSTNode(24, BSTNode(18, None, None), BSTNode(37, None, None))), 11, comes_before), True)
+    def test_delete(self):
+        RBTree = insert(None, 51)
+        self.assertEqual(RBTree, Node("B", 51, None, None))
+        RBTree = insert(RBTree, 21)
+        self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), None))
+        RBTree = insert(RBTree, 124)
+        self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), Node("R", 124, None, None)))
+        RBTree = delete(RBTree, 21)
+        self.assertEqual(RBTree, Node("B", 51, None, Node("R", 124, None, None)))
+        RBTree = delete(RBTree, 51)
+        self.assertEqual(RBTree, Node("B", 124, None, None))
+        RBTree = delete(RBTree, 124)
+        self.assertEqual(RBTree, None)
 
-    # def test_delete(self):
-    #     BTree = BinarySearchTree(comes_before)
-    #     self.assertEqual(delete(BTree, 1), BTree)
-    #     self.assertEqual(BTree.root, None)
-    #     self.assertEqual(BTree, BinarySearchTree(comes_before))
+        RBTree = insert(None, 51)
+        self.assertEqual(RBTree, Node("B", 51, None, None))
+        RBTree = insert(RBTree, 21)
+        self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), None))
+        RBTree = insert(RBTree, 124)
+        self.assertEqual(RBTree, Node("B", 51, Node("R", 21, None, None), Node("R", 124, None, None)))
+        RBTree = insert(RBTree, 33)
+        self.assertEqual(RBTree, Node("B", 33, Node("B", 21, None, None), Node("B", 51, None, Node("R", 124, None, None))))
+        RBTree = insert(RBTree, 92)
+        self.assertEqual(RBTree, Node('B', 33, Node('B', 21, None, None), Node('R', 92, Node('B', 51, None, None), Node('B', 124, None, None))))
+        RBTree = insert(RBTree, 27)
+        self.assertEqual(RBTree, Node('B', 33, Node('B', 21, None, Node("R", 27, None, None)), Node('R', 92, Node('B', 51, None, None), Node('B', 124, None, None))))
 
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(7, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(5, None, None)), BSTNode(12, BSTNode(9, None, None), BSTNode(17, None, None)))
-    #     BTree = delete(BTree, 17)
-    #     self.assertEqual(BTree.root, BSTNode(7, BSTNode(3, BSTNode(1, None,
-    #     BSTNode(5, None, None)), BSTNode(5, None, None)), BSTNode(12,
-    #     BSTNode(9, None, None), None)))
-
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(7, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(5, None, None)), BSTNode(12, BSTNode(9, None, None), BSTNode(17, None, None)))
-    #     BTree = delete(BTree, 31)
-    #     BTree = delete(BTree, 97)
-    #     self.assertEqual(BTree.root, BSTNode(7, BSTNode(3, BSTNode(1, None,
-    #     BSTNode(5, None, None)), BSTNode(5, None, None)), BSTNode(12, BSTNode(9, None, None),
-    #     BSTNode(17, None, None))))
-
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(7, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(5, None, None)), BSTNode(12, None, BSTNode(17, None, None)))
-    #     BTree = delete(BTree, 12)
-    #     self.assertEqual(BTree.root, BSTNode(7, BSTNode(3, BSTNode(1, None,
-    #     BSTNode(5, None, None)), BSTNode(5, None, None)), BSTNode(17, None, None)))
-
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(7, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(5, None, None)), BSTNode(12, BSTNode(9, None, None), None))
-    #     BTree = delete(BTree, 12)
-    #     self.assertEqual(BTree.root, BSTNode(7, BSTNode(3, BSTNode(1, None,
-    #     BSTNode(5, None, None)), BSTNode(5, None, None)), BSTNode(9, None, None)))
-
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(7, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(6, None, None)), BSTNode(12, BSTNode(9, None, None), BSTNode(17, None, None)))
-    #     BTree = delete(BTree, 3)
-    #     self.assertEqual(BTree.root, BSTNode(7, BSTNode(6, BSTNode(1, None,
-    #     BSTNode(5, None, None)), None), BSTNode(12, BSTNode(9, None, None),
-    #     BSTNode(17, None, None))))
-
-    #     BTree = BinarySearchTree(comes_before)
-    #     BTree.root = BSTNode(8, BSTNode(3, BSTNode(1, None, BSTNode(5, None, None)),
-    #     BSTNode(7, BSTNode(6, None, None), None)), BSTNode(12, BSTNode(9, None, None),
-    #     BSTNode(17, None, None)))
-    #     BTree = delete(BTree, 3)
-    #     self.assertEqual(BTree.root, BSTNode(8, BSTNode(6, BSTNode(1, None,
-    #     BSTNode(5, None, None)), BSTNode(7, None, None)), BSTNode(12, BSTNode(9, None, None),
-    #     BSTNode(17, None, None))))
+        RBTree = delete(RBTree, 92)
 
     # def test_find_min(self):
     #     self.assertEqual(find_min(None, None), (None, None))

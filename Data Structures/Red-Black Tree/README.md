@@ -1,5 +1,5 @@
 # Red Black Tree
-Red Black Tree implementation. NEEDS WORK ON INSERT METHOD.
+Red Black Tree implementation.
 
 Rules:
 1.  Each `Node` must be either RED or Black

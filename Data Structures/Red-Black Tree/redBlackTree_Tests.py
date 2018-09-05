@@ -72,13 +72,10 @@ class TestCases(unittest.TestCase):
         RBTree = insert(RBTree, 27)
         self.assertEqual(RBTree, Node('B', 33, Node('B', 21, None, Node("R", 27, None, None)), Node('R', 92, Node('B', 51, None, None), Node('B', 124, None, None))))
 
-        RBTree = delete(RBTree, 92)
-
-    # def test_find_min(self):
-    #     self.assertEqual(find_min(None, None), (None, None))
-    #     self.assertEqual(find_min(BSTNode(7, None, None), BSTNode(2, BSTNode(1, None, None),
-    #     BSTNode(7, None, None))), (BSTNode(2, BSTNode(1, None, None), BSTNode(7, None, None)),
-    #     BSTNode(7, None, None)))
+        RBTree = delete(RBTree, 33)
+        self.assertEqual(RBTree, Node('B', 51, Node('B', 21, None, Node('R', 27, None, None)), Node('R', 92, None, Node('B', 124, None, None))))
+        RBTree = delete(RBTree, 51)
+        self.assertEqual(RBTree, Node('B', 92, Node('B', 21, None, Node('R', 27, None, None)), Node('B', 124, None, None)))
 
 if __name__ == '__main__':
     unittest.main()
